@@ -2,13 +2,8 @@ package com.epam.mjc;
 
 public class noStudentWithThisIDException extends IllegalArgumentException
 {
-  noStudentWithThisIDException(String msg)
+  noStudentWithThisIDException(long ID)
   {
-      super(msg);
+      super("Could not find student with ID " + ID);
   }
-  noStudentWithThisIDException(String msg, Throwable ex)
-  {
-      super(msg, ex);
-  }
-
 }
